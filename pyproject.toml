@@ -1,0 +1,31 @@
+[project]
+name = "clinical-protocol-risk-analyzer"
+version = "0.1.0"
+description = "Analyze clinical trial protocols for multi-domain risks and mitigated protocol edits."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.40.0",
+  "pydantic>=2.8.0",
+  "pypdf>=4.3.0",
+  "python-dotenv>=1.0.1",
+  "reportlab>=4.2.2",
+  "python-docx>=1.1.2",
+  "docx2pdf>=0.1.8",
+  "rich>=13.7.1",
+  "streamlit>=1.37.1",
+  "typer>=0.12.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.2",
+]
+
+[project.scripts]
+protocol-risk-analyzer = "protocol_risk_analyzer.cli:app"
+protocol-risk-web = "protocol_risk_analyzer.web_app:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

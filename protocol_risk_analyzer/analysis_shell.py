@@ -1,0 +1,1 @@
+from protocol_risk_analyzer.frontend.dashboard import render_analysis_results
